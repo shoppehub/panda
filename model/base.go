@@ -9,8 +9,8 @@ const JsonTimeLayout = "2006-01-02 15:04:05"
 
 // 时间模型，设置开始和结束时间
 type Gmt struct {
-	GmtCreated  time.Time `json:"gmtCreated,omitempty"`
-	GmtModified time.Time `json:"gmtModified,omitempty"`
+	GmtCreated  *time.Time `json:"gmtCreated,omitempty"`
+	GmtModified *time.Time `json:"gmtModified,omitempty"`
 }
 
 // id 为 string 的基础模型
