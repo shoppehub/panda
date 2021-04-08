@@ -17,6 +17,8 @@ type Site struct {
 	CategoryId string `json:"categoryId,omitempty"`
 	// 站点版本
 	Version int `json:"version,omitempty"`
+	// 网站 favicon
+	Favicon string `json:"favicon,omitempty"`
 }
 
 func InitSite() {
