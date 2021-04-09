@@ -62,24 +62,19 @@ type SitePageSegment struct {
 	*/
 	Layout string `json:"layout,omitempty"`
 	// 自定义样式
-	StyleData string `json:"styleData,omitempty"`
+	StyleData map[string]interface{} `json:"styleData,omitempty"`
 	//区块，每个
 	Regions []SitePageSegment `json:"regions,omitempty"`
 }
 
 // 站点段落内区域实例
 type SitePageRegion struct {
-	/**
-	区域类型，用于标记该区域多大宽度
-	full 代表和父元素一致
-	left 代表是左侧区域
-	main 代表是中间区域
-	right 代表是右边曲剧
-	*/
-	Type string `json:"type,omitempty"`
+
+	// 列的序号，用于控制位置
+	ColumnIndex int `json:"columnIndex,omitempty"`
 
 	// 自定义样式
-	StyleData string `json:"styleData,omitempty"`
+	StyleData map[string]interface{} `json:"styleData,omitempty"`
 	//区块，每个
 	Regions []SitePageSegment `json:"regions,omitempty"`
 }
@@ -92,7 +87,7 @@ type SitePageComponent struct {
 	*/
 	MatchRegionType []string `json:"type,omitempty"`
 	// 自定义样式
-	StyleData string `json:"styleData,omitempty"`
+	StyleData map[string]interface{} `json:"styleData,omitempty"`
 	// 自定义数据
 	Data map[string]interface{} `json:"data,omitempty"`
 }
