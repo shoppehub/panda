@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/flosch/pongo2"
+	"github.com/flosch/pongo2/v4"
 	"github.com/gin-gonic/gin"
 	"github.com/shoppehub/shoppe"
 )

@@ -61,10 +61,8 @@ type SitePageSegment struct {
 		main-right-column 中右布局
 	*/
 	Layout string `json:"layout,omitempty"`
-	// 是否撑满全屏，默认否，如果是那么会影响除了 1-column 之外的layout
-	FullWidth bool `json:"fullWidth,omitempty"`
 	// 自定义样式
-	Style string `json:"style,omitempty"`
+	StyleData string `json:"styleData,omitempty"`
 	//区块，每个
 	Regions []SitePageSegment `json:"regions,omitempty"`
 }
@@ -81,7 +79,7 @@ type SitePageRegion struct {
 	Type string `json:"type,omitempty"`
 
 	// 自定义样式
-	Style string `json:"style,omitempty"`
+	StyleData string `json:"styleData,omitempty"`
 	//区块，每个
 	Regions []SitePageSegment `json:"regions,omitempty"`
 }
@@ -94,7 +92,7 @@ type SitePageComponent struct {
 	*/
 	MatchRegionType []string `json:"type,omitempty"`
 	// 自定义样式
-	Style string `json:"style,omitempty"`
+	StyleData string `json:"styleData,omitempty"`
 	// 自定义数据
-	Data map[string]string `json:"data,omitempty"`
+	Data map[string]interface{} `json:"data,omitempty"`
 }

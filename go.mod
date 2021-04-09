@@ -4,7 +4,6 @@ go 1.16
 
 require (
 	github.com/aws/aws-sdk-go v1.38.13 // indirect
-	github.com/flosch/pongo2 v0.0.0-20200913210552-0d938eb266f3 // indirect
 	github.com/flosch/pongo2/v4 v4.0.2 // indirect
 	github.com/gin-contrib/cors v1.3.1 // indirect
 	github.com/gin-gonic/gin v1.6.3 // indirect
