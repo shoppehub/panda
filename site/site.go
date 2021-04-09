@@ -1,6 +1,8 @@
-package service
+package site
 
-import "github.com/shoppehub/shoppe/model"
+import (
+	"github.com/shoppehub/shoppe/model"
+)
 
 // 站点模型,前台和后台公用一个模型
 type Site struct {
@@ -21,6 +23,8 @@ type Site struct {
 	Favicon string `json:"favicon,omitempty"`
 }
 
-func InitSite() {
+// 初始化站点
+func (s *Site) InitSite() *Site {
 
+	return nil
 }

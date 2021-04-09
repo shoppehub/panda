@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/stnc/pongo2gin"
+	"github.com/shoppehub/shoppe/render"
 )
 
 func New() *gin.Engine {
@@ -18,7 +18,7 @@ func New() *gin.Engine {
 	r.Use(gin.Recovery())
 	r.Use(cors.Default())
 
-	r.HTMLRender = pongo2gin.TemplatePath("templates")
+	r.HTMLRender = render.TemplatePath("templates")
 
 	// api.Create(r)
 
