@@ -1,7 +1,7 @@
 package site
 
 // 组件定义
-type Component struct {
+type SitePageComponent struct {
 	// 组件id
 	ComponentId string `json:"componentId,omitempty"`
 	/**

@@ -7,5 +7,5 @@ type SitePageRegion struct {
 	// 自定义样式
 	StyleData map[string]interface{} `json:"styleData,omitempty"`
 	//区块内的组件
-	Components []Component `json:"components,omitempty"`
+	Components []SitePageComponent `json:"components,omitempty"`
 }
