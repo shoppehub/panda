@@ -1,10 +1,12 @@
 package site
 
-import "github.com/shoppehub/shoppe/model"
+import (
+	"gorm.io/gorm"
+)
 
 // SEO 配置
 type Seo struct {
-	model.BaseStringId
+	gorm.Model
 	SiteId string `json:"siteId,omitempty"`
 	// 页面的 ID
 	PageId string `json:"pageId,omitempty"`
@@ -20,7 +22,7 @@ type Seo struct {
 
 // SEO 配置
 type SeoRedirect struct {
-	model.BaseStringId
+	gorm.Model
 	SiteId string `json:"siteId,omitempty"`
 	// 页面的 ID
 	SourcePath string `json:"sourcePath,omitempty"`

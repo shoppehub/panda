@@ -1,10 +1,10 @@
 package site
 
-import "github.com/shoppehub/shoppe/model"
+import "gorm.io/gorm"
 
 // 站点页面实例
 type SitePage struct {
-	model.BaseStringId
+	gorm.Model
 	SiteInstanceId string `json:"siteInstanceId,omitempty"`
 	// 页面名称，一般用于系统页面
 	PageName string `json:"pageName,omitempty"`

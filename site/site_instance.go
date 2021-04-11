@@ -1,10 +1,10 @@
 package site
 
-import "github.com/shoppehub/shoppe/model"
+import "gorm.io/gorm"
 
 //站点实例
 type SiteInstance struct {
-	model.BaseStringId
+	gorm.Model
 	// 站点id
 	SiteId string `json:"siteId,omitempty"`
 	// 实例版本，保存一次就增加一次version

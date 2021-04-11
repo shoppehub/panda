@@ -1,8 +1,10 @@
 package component
 
-import "github.com/shoppehub/shoppe/model"
+import (
+	"gorm.io/gorm"
+)
 
 // 组件定义
 type Component struct {
-	model.BaseStringId
+	gorm.Model
 }

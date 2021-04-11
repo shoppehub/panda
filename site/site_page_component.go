@@ -1,7 +1,10 @@
 package site
 
+import "gorm.io/gorm"
+
 // 组件定义
 type SitePageComponent struct {
+	gorm.Model
 	// 组件id
 	ComponentId string `json:"componentId,omitempty"`
 	/**

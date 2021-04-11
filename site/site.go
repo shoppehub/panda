@@ -1,18 +1,18 @@
 package site
 
-import (
-	"github.com/shoppehub/shoppe/model"
-)
+import "time"
 
 // 站点模型,前台和后台公用一个模型
 type Site struct {
-	model.BaseStringId
+	ID        uint `gorm:"primarykey;autoIncrement:false"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
 	// 二级域名
 	Subdomain string `json:"subdomain,omitempty"`
 	// 顶级域名
 	Domain string `json:"domain,omitempty"`
 	// 用户Id
-	UserId string `json:"userId,omitempty"`
+	UserId uint `json:"userId,omitempty"`
 	// 站点名称
 	Name string `json:"name,omitempty"`
 	// 站点分类
