@@ -18,11 +18,11 @@ func TestCreate(t *testing.T) {
 
 	db.AutoMigrate(&Site{})
 
-	db.Create(&Site{ID: 6, Name: "D44", UserId: 100})
+	db.Create(&Site{Name: "D44", UserId: 100})
 
 	var site2 Site
 
-	db.First(&site2, "name = ?", "D44") // 查找 code 字段值为 D42 的记录
+	db.Find(&site2, "name = ?", "D44") // 查找 code 字段值为 D42 的记录
 
 	fmt.Println(site2)
 }
