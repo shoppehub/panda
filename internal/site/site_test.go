@@ -22,7 +22,7 @@ func TestCreate(t *testing.T) {
 
 	var site2 Site
 
-	db.Find(&site2, "name = ?", "D44") // 查找 code 字段值为 D42 的记录
+	db.Where("name = ?", "D44").Order("created_at desc").Find(&site2) // 查找 code 字段值为 D42 的记录
 
 	fmt.Println(site2)
 }

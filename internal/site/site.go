@@ -1,12 +1,12 @@
 package site
 
-import "time"
+import (
+	"gorm.io/gorm"
+)
 
 // 站点模型,前台和后台公用一个模型
 type Site struct {
-	ID        uint `gorm:"primarykey;autoIncrement:100000000"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	gorm.Model
 	// 二级域名
 	Subdomain string `json:"subdomain,omitempty"`
 	// 顶级域名
